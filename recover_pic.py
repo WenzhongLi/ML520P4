@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 f1 = open('data.csv', 'r')
 size = 231401
 length = 641
-width = size/length + 1
+width = (int)(size/length + 1)
 img = Image.new("L", (length,width))
 x = 0
 y = 0
@@ -40,7 +40,7 @@ f1 = open('input.csv', 'r')
 
 size = 48894
 length = 281
-width = size/length + 1
+width = (int)(size/length + 1)
 img = Image.new("L", (length,width))
 x = 0
 y = 0
@@ -68,7 +68,7 @@ f1 = open('color.csv', 'r')
 
 size = 48894
 length = 281
-width = size/length + 1
+width = (int)(size/length + 1)
 img = Image.new("RGBA", (length,width), (0,0,0))
 x = 0
 y = 0
