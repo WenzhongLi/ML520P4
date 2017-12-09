@@ -24,10 +24,11 @@ class KMeans:
     def KMeans(self,data,k):
         m = data.shape[0]
         centroids = self.createRC(data,k)
-        assignment_mat = np.zeros()
+        assignment_mat = np.zeros((m,2))
         flag = True
         while flag:
             flag = False
             for i in range(m):
                 min_dis = sys.maxsize
+
 
