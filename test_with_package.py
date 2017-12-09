@@ -15,3 +15,4 @@ centroids = estimator.cluster_centers_ #获取聚类中心
 print(centroids)
 inertia = estimator.inertia_ # 获取聚类准则的总和
 np.savetxt('new.csv', label_pred, delimiter = ',')
+

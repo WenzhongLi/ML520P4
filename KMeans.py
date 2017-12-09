@@ -2,6 +2,7 @@
 #author : GE
 import numpy as np
 import random
+import sys
 
 class KMeans:
     def __init__(self):
@@ -23,4 +24,10 @@ class KMeans:
     def KMeans(self,data,k):
         m = data.shape[0]
         centroids = self.createRC(data,k)
+        assignment_mat = np.zeros()
         flag = True
+        while flag:
+            flag = False
+            for i in range(m):
+                min_dis = sys.maxsize
+
