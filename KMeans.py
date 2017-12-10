@@ -40,7 +40,11 @@ class KMeans:
                     flag = True
                 assignment_mat[i,:] = min_idx,min_dis**2
             for cent in range(k):
-                point_in_cluster = data
+                point_in_cluster = []
+                for l in range(m):
+                    if assignment_mat[j,0] == cent:
+                        point_in_cluster.append(data[j].tolist()[0])
+                point_in_cluster = np.mat(point_in_cluster)
                 centroids = np.mean(point_in_cluster, axis= 0)
         return centroids, assignment_mat
 
