@@ -16,9 +16,9 @@ print(type(data))
 # print(centroids)
 # inertia = estimator.inertia_ # 获取聚类准则的总和
 
-centroids, label_pred = vq.kmeans2( data, 44 )
+centroids, label_pred = vq.kmeans2( data, 101 )
 
-np.savetxt('gray_44.csv', label_pred, delimiter = ',')
-np.savetxt('gray_centroids_44.csv', centroids, delimiter = ',')
+np.savetxt('gray_101.csv', label_pred, delimiter = ',')
+np.savetxt('gray_centroids_101.csv', centroids, delimiter = ',')
 
 
