@@ -30,5 +30,18 @@ class KMeans:
             flag = False
             for i in range(m):
                 min_dis = sys.maxsize
+                min_idx = -1
+                for j in range(k):
+                    dis_ji = self.distance(centroids[j,:],data[i,:])
+                    if dis_ji < min_dis:
+                        min_dis = dis_ji
+                        min_idx = j
+                if assignment_mat[i,0] != min_idx:
+                    flag = True
+                assignment_mat[i,:] = min_idx,min_dis**2
+            for cent in range(k):
+                point_in_cluster = data
+                centroids = np.mean(point_in_cluster, axis= 0)
+        return centroids, assignment_mat
 
 
