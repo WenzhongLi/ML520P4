@@ -11,7 +11,7 @@ from PIL import Image
 class color(object):
 
     def run(self):
-        fdata = open("recover4.csv", 'r')
+        fdata = open("recover5.csv", 'r')
         fcolor = open("rgb32_C.csv", 'r')
         color_class2color = []
         for line in fcolor:
